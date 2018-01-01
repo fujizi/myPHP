@@ -1,17 +1,21 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Connecting MySQL Server</title>
+</head>
+<body>
 <?php
-$x=5; // Global vars
-
-function myTest()
-{
-    $y=10; // local vars
-    echo "<p>Test variables inside the function:<p>";
-    echo "Variable x is: $x";
-    echo "<br>";
-    echo "Variable y is: $y";
-}
-
-myTest();
-
-echo "this is a test for PHP."
-echo "test the first branch dev."
+   $dbhost = '127.0.0.1';  //mysql host ip address
+   $dbuser = 'root';      //mysql user name
+   $dbpass = 'spec4mysql';//mysql password
+   $dbase = 'mybooks';//mysql database
+   $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbase);
+   if(! $conn )
+   {
+      die('Could not connect: ' . mysql_error());
+    }
+    echo 'Connected successfully';
+    mysqli_close($conn);
 ?>
+</body>
+</html>
