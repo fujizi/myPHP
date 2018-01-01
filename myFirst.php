@@ -12,8 +12,5 @@ function myTest()
 
 myTest();
 
-echo "<p>Test variables outside the function:<p>";
-echo "Variable x is: $x";
-echo "<br>";
-echo "Variable y is: $y";
+echo "this is a test for PHP."
 ?>
